@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md Ahasanul Alam - Personal Website</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Personal portfolio website of Md Ahasanul Alam - Software Developer and Tech Enthusiast">
+    <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
 </head>
 <body>
     <header>
@@ -28,9 +30,9 @@
                 <h1>Md Ahasanul Alam</h1>
                 <p class="typed-text"></p>
                 <div class="social-links">
-                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/your-profile" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/your-profile" target="_blank" aria-label="Twitter Profile"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </section>
@@ -40,11 +42,15 @@
                 <h2>About Me</h2>
                 <div class="about-content">
                     <div class="about-image">
-                        <img src="profile.jpg" alt="Md Ahasanul Alam">
+                        <img src="images/profile.jpg" alt="Md Ahasanul Alam" loading="lazy">
                     </div>
                     <div class="about-text">
-                        <p>Hello! I'm Md Ahasanul Alam, a passionate professional dedicated to...</p>
-                        <a href="#" class="btn">Download CV</a>
+                        <p>Hello! I'm a passionate Software Developer with a keen interest in building innovative solutions. I specialize in web development and enjoy creating user-friendly applications that solve real-world problems.</p>
+                        <p>With expertise in modern technologies and a strong foundation in software engineering principles, I strive to write clean, efficient, and maintainable code.</p>
+                        <div class="about-buttons">
+                            <a href="resume.pdf" class="btn" target="_blank">Download CV</a>
+                            <a href="#contact" class="btn">Get in Touch</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -52,25 +58,25 @@
 
         <section id="skills" class="skills">
             <div class="container">
-                <h2>Skills</h2>
+                <h2>Skills & Technologies</h2>
                 <div class="skills-grid">
-                    <!-- Skills will be dynamically populated by JavaScript -->
+                    <!-- Dynamically populated by JavaScript -->
                 </div>
             </div>
         </section>
 
         <section id="projects" class="projects">
             <div class="container">
-                <h2>Projects</h2>
+                <h2>Featured Projects</h2>
                 <div class="projects-grid">
-                    <!-- Projects will be dynamically populated by JavaScript -->
+                    <!-- Dynamically populated by JavaScript -->
                 </div>
             </div>
         </section>
 
         <section id="contact" class="contact">
             <div class="container">
-                <h2>Contact Me</h2>
+                <h2>Get in Touch</h2>
                 <form id="contact-form">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
@@ -82,7 +88,9 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Md Ahasanul Alam. All Rights Reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Md Ahasanul Alam. All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
