@@ -127,6 +127,98 @@ document.addEventListener('DOMContentLoaded', () => {
         projectsGrid.appendChild(projectCard);
     });
 
+    // Publications Section
+    const publicationsList = document.querySelector('.publications-list');
+    const publications = [
+        {
+            title: 'Cooperative Pathfinding in Multi-agent Systems: A Comparative Study',
+            authors: 'Alam, M. A., Rahman, M. S.',
+            journal: 'International Conference on Computer and Information Technology (ICCIT)',
+            year: '2023',
+            doi: '#',
+            abstract: 'This research explores various cooperative pathfinding algorithms in multi-agent systems, comparing their efficiency and scalability in different scenarios.'
+        },
+        {
+            title: 'Machine Learning Approaches in Distributed Systems: Challenges and Solutions',
+            authors: 'Alam, M. A., Khan, S. A.',
+            journal: 'International Conference on Advances in Computing and Technology',
+            year: '2022',
+            doi: '#',
+            abstract: 'A comprehensive analysis of machine learning implementation challenges in distributed systems, proposing novel solutions for improved performance and reliability.'
+        }
+    ];
+
+    publications.forEach(pub => {
+        const pubElement = document.createElement('div');
+        pubElement.classList.add('publication-item');
+        pubElement.innerHTML = `
+            <h3>${pub.title}</h3>
+            <div class="publication-meta">
+                <p><strong>Authors:</strong> ${pub.authors}</p>
+                <p><strong>Journal/Conference:</strong> ${pub.journal} (${pub.year})</p>
+                ${pub.doi !== '#' ? `<p><strong>DOI:</strong> <a href="${pub.doi}" target="_blank">${pub.doi}</a></p>` : ''}
+            </div>
+            <p>${pub.abstract}</p>
+        `;
+        publicationsList.appendChild(pubElement);
+    });
+
+    // Teaching Section
+    const currentCoursesList = document.querySelector('.current-courses .courses-list');
+    const pastCoursesList = document.querySelector('.past-courses .courses-list');
+
+    const currentCourses = [
+        {
+            code: 'CSE421',
+            name: 'Computer Networks',
+            semester: 'Spring 2024',
+            description: 'Fundamentals of computer networking, protocols, and distributed systems'
+        },
+        {
+            code: 'CSE423',
+            name: 'Computer Security',
+            semester: 'Spring 2024',
+            description: 'Introduction to cybersecurity concepts and practices'
+        }
+    ];
+
+    const pastCourses = [
+        {
+            code: 'CSE341',
+            name: 'Artificial Intelligence',
+            semester: 'Fall 2023',
+            description: 'Introduction to AI concepts, machine learning, and intelligent systems'
+        },
+        {
+            code: 'CSE323',
+            name: 'Operating Systems',
+            semester: 'Summer 2023',
+            description: 'Core concepts of operating systems and system programming'
+        }
+    ];
+
+    currentCourses.forEach(course => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <strong>${course.code}:</strong> ${course.name}
+            <br>
+            <small>${course.semester}</small>
+            <p class="course-description">${course.description}</p>
+        `;
+        currentCoursesList.appendChild(li);
+    });
+
+    pastCourses.forEach(course => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <strong>${course.code}:</strong> ${course.name}
+            <br>
+            <small>${course.semester}</small>
+            <p class="course-description">${course.description}</p>
+        `;
+        pastCoursesList.appendChild(li);
+    });
+
     // Contact Form
     const contactForm = document.getElementById('contact-form');
     contactForm.addEventListener('submit', async (e) => {
